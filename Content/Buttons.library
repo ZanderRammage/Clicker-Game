@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "Buttons",
+	uint64 LibraryId = 56adab8e864a64c7,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},

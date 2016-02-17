@@ -1,0 +1,48 @@
+class ButtonBehavior : ZilchComponent
+{
+    var Toggle : Boolean = false;
+    [Property]
+    var Points : Integer = 0;
+    var Click : Integer = 1;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+    }
+    
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+    }
+    
+    
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.CurrentFrame = 1;
+    }
+    
+    
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.Points += this.Click;
+        Console.WriteLine(this.Click);
+    }
+    
+    
+    function OnMouseUp(event : ViewportMouseEvent)
+    {
+        
+    }
+    
+    
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.CurrentFrame = 0;
+    }
+}

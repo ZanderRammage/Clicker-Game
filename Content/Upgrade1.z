@@ -1,0 +1,74 @@
+class Upgrade1 : ZilchComponent
+{
+    var Timer : Real = 0;
+    var Bought : Boolean = false;
+    var Amount : Integer = 0;
+    var Cost : Integer = 10;
+    //var Points : Integer;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Console.WriteLine(this.Cost);
+    }
+    
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var points = this.Space.FindObjectByName("Button1").ButtonBehavior.Points;
+        
+        if(this.Bought == true)
+        {
+            this.Timer += event.Dt;
+            if(this.Timer >= 1)
+            {
+                Console.WriteLine("++");
+                this.Timer = 0;
+                points += this.Amount;
+                Console.WriteLine("`points` `this.Amount`");
+            }
+        }
+        this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
+    }
+    
+    
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.Color = Real4(0.5, 0.5, 0.5, 1);
+    }
+    
+    
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        var points = this.Space.FindObjectByName("Button1").ButtonBehavior.Points;
+        
+        if(points >= this.Cost)
+        {
+            Console.WriteLine("Bought!");
+            this.Bought = true;
+            this.Amount += 1;
+            points -= this.Cost;
+            this.Cost += 5;
+            Console.WriteLine(this.Amount);
+            Console.WriteLine(this.Cost);
+        }
+        this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
+    }
+    
+    
+    function OnMouseUp(event : ViewportMouseEvent)
+    {
+        
+    }
+    
+    
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.Color = Real4(1, 1, 1, 1);
+    }
+}
