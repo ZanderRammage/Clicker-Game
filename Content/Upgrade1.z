@@ -4,7 +4,6 @@ class Upgrade1 : ZilchComponent
     var Bought : Boolean = false;
     var Amount : Integer = 0;
     var Cost : Integer = 10;
-    //var Points : Integer;
     
     
     function Initialize(init : CogInitializer)
@@ -27,10 +26,8 @@ class Upgrade1 : ZilchComponent
             this.Timer += event.Dt;
             if(this.Timer >= 1)
             {
-                Console.WriteLine("++");
                 this.Timer = 0;
                 points += this.Amount;
-                Console.WriteLine("`points` `this.Amount`");
             }
         }
         this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
@@ -39,7 +36,7 @@ class Upgrade1 : ZilchComponent
     
     function OnMouseEnter(event : ViewportMouseEvent)
     {
-        this.Owner.Sprite.Color = Real4(0.5, 0.5, 0.5, 1);
+        this.Owner.Sprite.Color = Real4(0.75, 0.75, 0.75, 1);
     }
     
     
@@ -49,13 +46,10 @@ class Upgrade1 : ZilchComponent
         
         if(points >= this.Cost)
         {
-            Console.WriteLine("Bought!");
             this.Bought = true;
             this.Amount += 1;
             points -= this.Cost;
             this.Cost += 5;
-            Console.WriteLine(this.Amount);
-            Console.WriteLine(this.Cost);
         }
         this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
     }

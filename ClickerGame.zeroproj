@@ -2,11 +2,11 @@ Cog =
 {
 	Project = 
 	{
-		string ProjectName = "Buttons",
+		string ProjectName = "ClickerGame",
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "C:\Users\16.Zander.Rammage\Documents\ZeroProjects\Buttons",
+		string ProjectFolder = "C:\Users\Zander Rammage\Documents\Repositories\Clicker-Game",
 		uint ProjectEngineRevision = 12624,
 		bool AutoTakeProjectScreenshot = true,
 	},

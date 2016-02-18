@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "ClickerGame",
+	uint64 LibraryId = 5608d6f141eb2d26,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},
