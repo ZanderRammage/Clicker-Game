@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [11.6538038, 17.6847534, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -77,7 +77,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 30,
-				string Text = "Name",
+				string Text = "Basic Button",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
@@ -116,7 +116,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 30,
-				string Text = "Description",
+				string Text = "+1 Points Per Second",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,

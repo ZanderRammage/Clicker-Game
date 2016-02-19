@@ -21,7 +21,7 @@ class Upgrade2 : ZilchComponent
         var click = this.Space.FindObjectByName("Button1").ButtonBehavior.Click;
         if(this.Bought == true)
         {
-            click = this.Amount;
+            click = 100000/*this.Amount*/;
         }
         this.Space.FindObjectByName("Button1").ButtonBehavior.Click = click;
     }
