@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Info2Move",
+		uint64 ResourceId = 56dc851bde36c1dd,
+	},
+},

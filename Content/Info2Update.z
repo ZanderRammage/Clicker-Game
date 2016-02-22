@@ -1,0 +1,15 @@
+class Info2Update : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var cost = this.Space.FindObjectByName("Upgrade2").Upgrade2.Cost;
+        this.Space.FindObjectByName("InfoCost2").SpriteText.Text = ("Cost: `cost`");
+        var owned = this.Space.FindObjectByName("Upgrade2").Upgrade2.Amount;
+        this.Space.FindObjectByName("InfoOwned2").SpriteText.Text = ("Owned: `owned`");
+    }
+}

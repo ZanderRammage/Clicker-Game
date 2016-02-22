@@ -30,6 +30,7 @@ class Upgrade1 : ZilchComponent
                 points += this.Amount;
             }
         }
+        
         this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
     }
     
