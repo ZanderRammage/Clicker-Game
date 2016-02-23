@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.467470169, 5.45061398, 50],
+			Vec3 Translation = [10.07728, 6.9318471, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594585,
+			float Size = 14.7781124,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.467470169, 5.45061398, -5.88574551e-007],
+			Vec3 LookTarget = [10.07728, 6.9318471, -1.68516451e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -355,13 +355,51 @@ Level =
 				{
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "UpgradeProgress1",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -9, 0],
+					Vec3 Scale = [8, 8, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "56db2f1da6d27a8e:Progress",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 0,
+					uint StartFrame = 0,
+				},
+				Upgrade1Progress = 
+				{
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -420,7 +458,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -459,7 +497,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -506,19 +544,13 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
-		Upgrade1 = 
-		{
-		},
-		Info1 = 
-		{
-		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 12,
 				},
 				Named = 
 				{

@@ -21,6 +21,7 @@ class Upgrade1 : ZilchComponent
     {
         var points = this.Space.FindObjectByName("Button1").ButtonBehavior.Points;
         
+        
         if(this.Bought == true)
         {
             this.Timer += event.Dt;
@@ -44,15 +45,18 @@ class Upgrade1 : ZilchComponent
     function OnMouseDown(event : ViewportMouseEvent)
     {
         var points = this.Space.FindObjectByName("Button1").ButtonBehavior.Points;
+        var progress = this.Space.FindObjectByName("UpgradeProgress1").Upgrade1Progress.Progress;
         
         if(points >= this.Cost)
         {
+            progress += 1;
             this.Bought = true;
             this.Amount += 1;
             points -= this.Cost;
             this.Cost += 5;
         }
         this.Space.FindObjectByName("Button1").ButtonBehavior.Points = points;
+        this.Space.FindObjectByName("UpgradeProgress1").Upgrade1Progress.Progress = progress;
     }
     
     

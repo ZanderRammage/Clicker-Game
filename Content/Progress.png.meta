@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Progress",
+		uint64 ResourceId = 56db2f1da6d27a8e,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 104,
+		uint FrameSizeY = 20,
+		uint FrameCount = 51,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 52,
+		float OriginY = 10,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

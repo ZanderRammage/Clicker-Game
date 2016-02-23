@@ -1,0 +1,18 @@
+class Upgrade1Progress : ZilchComponent
+{
+    var Progress : Integer = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Sprite.CurrentFrame = this.Progress;
+        
+        if(this.Progress == 50)
+        {
+            this.Progress = 0;
+        }
+    }
+}

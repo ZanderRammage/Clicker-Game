@@ -1,11 +1,18 @@
 class Upgrade1Bonus : ZilchComponent
 {
+    var Bonus : Boolean = false;
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        var amount = this.Space.FindObjectByName("Upgrade1").Upgrade1.Amount;
+        var frame = this.Space.FindObjectByName("UpgradeProgress1").Sprite.CurrentFrame;
+        if(true)
+        {
+            
+        }
     }
 }
