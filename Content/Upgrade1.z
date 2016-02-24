@@ -4,7 +4,7 @@ class Upgrade1 : ZilchComponent
     var Bought : Boolean = false;
     var Amount : Integer = 0;
     var Cost : Integer = 10;
-    
+    var Discount : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -25,9 +25,10 @@ class Upgrade1 : ZilchComponent
         if(this.Bought == true)
         {
             this.Timer += event.Dt;
-            if(this.Timer >= 1)
+            if(this.Timer >= (1 - this.Discount))
             {
                 this.Timer = 0;
+                Console.WriteLine("Boom");
                 points += this.Amount;
             }
         }

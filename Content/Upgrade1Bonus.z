@@ -9,10 +9,5 @@ class Upgrade1Bonus : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var amount = this.Space.FindObjectByName("Upgrade1").Upgrade1.Amount;
-        var frame = this.Space.FindObjectByName("UpgradeProgress1").Sprite.CurrentFrame;
-        if(true)
-        {
-            
-        }
     }
 }

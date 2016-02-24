@@ -1,17 +1,23 @@
 class Upgrade1Progress : ZilchComponent
 {
     var Progress : Integer = 0;
+    var Discount : Real;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
+
         this.Owner.Sprite.CurrentFrame = this.Progress;
-        
         if(this.Progress == 50)
         {
+            this.Discount = this.Space.FindObjectByName("Upgrade1").Upgrade1.Discount;
+            this.Discount += 0.2;
+            this.Space.FindObjectByName("Upgrade1").Upgrade1.Discount = this.Discount;
             this.Progress = 0;
         }
     }

@@ -30,7 +30,7 @@ class ButtonBehavior : ZilchComponent
     
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        this.Points += 100000000;//this.Click;
+        this.Points += this.Click;
         Console.WriteLine(this.Click);
     }
     
