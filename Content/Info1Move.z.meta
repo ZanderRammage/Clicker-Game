@@ -5,4 +5,11 @@ TextContent =
 		string Name = "Info1Move",
 		uint64 ResourceId = 560960d1043a3a72,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"FirstUpgrade",
+		],
+	},
 },

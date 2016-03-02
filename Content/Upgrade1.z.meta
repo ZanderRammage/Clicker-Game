@@ -5,4 +5,10 @@ TextContent =
 		string Name = "Upgrade1",
 		uint64 ResourceId = 56d32720a734b9ad,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+		],
+	},
 },
